@@ -205,6 +205,8 @@ if host_machine.system() == 'linux'
                  install_dir: datadir / 'applications')
     install_data('data/scrcpy-console.desktop',
                  install_dir: datadir / 'applications')
+    install_data('data/scrcpy-root.desktop',
+                 install_dir: datadir / 'applications')
 endif
 
 
