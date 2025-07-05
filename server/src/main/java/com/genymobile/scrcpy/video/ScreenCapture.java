@@ -22,6 +22,7 @@ import android.hardware.display.VirtualDisplay;
 import android.os.Build;
 import android.os.IBinder;
 import android.view.Surface;
+import android.system.Os;
 
 import java.io.IOException;
 
@@ -198,6 +199,9 @@ public class ScreenCapture extends SurfaceCapture {
         // On Android 12 preview, SDK_INT is still R (not S), but CODENAME is "S".
         boolean secure = Build.VERSION.SDK_INT < AndroidVersions.API_30_ANDROID_11 || (Build.VERSION.SDK_INT == AndroidVersions.API_30_ANDROID_11
                 && !"S".equals(Build.VERSION.CODENAME));
+        if (Os.getuid() < 2000) {
+            secure = true;
+        }
         return SurfaceControl.createDisplay("scrcpy", secure);
     }
 
