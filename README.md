@@ -1,4 +1,4 @@
-## scrcpy (v3.3.1-root)
+## scrcpy (v3.3.2-root)
 
 * This is a **Fork** scrcpy for add root (ignore FLAG_SECURE) and experiments.
 * **Bugs from this fork should be reported** [**here**](https://github.com/Mr-Precise/rscrcpy/issues), not to the original author.
